@@ -6,7 +6,7 @@ export function Hero() {
       <section className="hero">
         <div className="wrap hero__grid">
           <div>
-            <span className="tag">Studio Aplikasi AI &middot; Pekanbaru, Indonesia</span>
+            <span className="tag">Studio Aplikasi AI</span>
             <h1>
               AI yang benar-benar <em>kerja</em> di workflow kamu.
             </h1>

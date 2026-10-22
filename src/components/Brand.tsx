@@ -21,7 +21,7 @@ export function Brand() {
       </span>
       <span>
         LeebLabs
-        <small>Studio &middot; leeblabs.ai.id</small>
+        <small>Studio</small>
       </span>
     </a>
   );
