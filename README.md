@@ -22,9 +22,12 @@ npm run preview
 
 - `src/App.tsx` — komposisi utama halaman
 - `src/components/` — komponen UI per bagian halaman
+- `src/hooks/useTheme.ts` — tema otomatis dari preferensi perangkat dan override manual
 - `src/data/siteContent.ts` — konten layanan, langkah kerja, paket, dan FAQ
 - `src/styles.css` — design tokens, layout, serta responsive styling
 - `index.html` — shell dokumen yang memuat aplikasi React
+
+Tema mengikuti pengaturan perangkat secara default. Tombol ikon matahari/bulan di header dapat dipakai untuk memilih tema secara manual; pilihan manual disimpan di browser.
 
 ## Catatan sebelum publish
 
