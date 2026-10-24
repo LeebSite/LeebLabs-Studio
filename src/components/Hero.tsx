@@ -71,48 +71,70 @@ export function Hero() {
 
 function ProductPreview() {
   return (
-    <div className="hero__visual" aria-hidden="true">
-      <div className="mock mock--guru">
-        <div className="mock__head">
-          <span className="mock__dot" />
-          <span>GURU AI — PERANGKAT AJAR</span>
+    <div className="hero__visual">
+      <article className="hero__product hero__product--seller">
+        <div className="hero__portrait hero__portrait--seller">
+          <span className="hero__portrait-shadow" aria-hidden="true" />
+          <img
+            src={new URL("../public/hero-akuntan-sama-ukuran.webp", import.meta.url).href}
+            alt="Akuntan pria bekerja menggunakan laptop"
+            width="1024"
+            height="1024"
+          />
         </div>
-        <div className="mock__row">
-          <b>Modul Ajar — Informatika X</b>
-          <span className="pill pill--ok">Siap</span>
+        <div className="mock mock--seller">
+          <div className="mock__head">
+            <span className="mock__dot mock__dot--amber" />
+            <span>SELLER AI — TREN MINGGU INI</span>
+          </div>
+          <div className="mock__row">
+            <b>Kunjungan toko</b>
+            <span className="pill pill--amber">Naik</span>
+          </div>
+          <div className="mock__row">
+            <b>Chat terbalas &lt; 1 menit</b>
+            <span className="pill pill--amber">Otomatis</span>
+          </div>
+          <div className="bars">
+            {Array.from({ length: 7 }, (_, index) => (
+              <i key={index} className={index === 6 ? "hot" : undefined} />
+            ))}
+          </div>
         </div>
-        <div className="mock__row">
-          <b>ATP &amp; KKTP Fase E</b>
-          <span className="pill pill--ok">Siap</span>
+      </article>
+      <article className="hero__product hero__product--guru">
+        <div className="hero__portrait hero__portrait--guru">
+          <span className="hero__portrait-shadow" aria-hidden="true" />
+          <img
+            src={new URL("../public/hero-guru-sama-ukuran.webp", import.meta.url).href}
+            alt="Guru perempuan mengenakan seragam cokelat"
+            width="1024"
+            height="1024"
+          />
         </div>
-        <div className="mock__row">
-          <b>LKPD + Kunci Jawaban</b>
-          <span className="pill pill--ok">Siap</span>
+        <div className="mock mock--guru">
+          <div className="mock__head">
+            <span className="mock__dot" />
+            <span>GURU AI — PERANGKAT AJAR</span>
+          </div>
+          <div className="mock__row">
+            <b>Modul Ajar — Informatika X</b>
+            <span className="pill pill--ok">Siap</span>
+          </div>
+          <div className="mock__row">
+            <b>ATP &amp; KKTP Fase E</b>
+            <span className="pill pill--ok">Siap</span>
+          </div>
+          <div className="mock__row">
+            <b>LKPD + Kunci Jawaban</b>
+            <span className="pill pill--ok">Siap</span>
+          </div>
+          <div className="mock__row">
+            <b>Export Word / PPT / Excel</b>
+            <span className="pill pill--ok">1 klik</span>
+          </div>
         </div>
-        <div className="mock__row">
-          <b>Export Word / PPT / Excel</b>
-          <span className="pill pill--ok">1 klik</span>
-        </div>
-      </div>
-      <div className="mock mock--seller">
-        <div className="mock__head">
-          <span className="mock__dot mock__dot--amber" />
-          <span>SELLER AI — TREN MINGGU INI</span>
-        </div>
-        <div className="mock__row">
-          <b>Kunjungan toko</b>
-          <span className="pill pill--amber">Naik</span>
-        </div>
-        <div className="mock__row">
-          <b>Chat terbalas &lt; 1 menit</b>
-          <span className="pill pill--amber">Otomatis</span>
-        </div>
-        <div className="bars">
-          {Array.from({ length: 7 }, (_, index) => (
-            <i key={index} className={index === 6 ? "hot" : undefined} />
-          ))}
-        </div>
-      </div>
+      </article>
     </div>
   );
 }
