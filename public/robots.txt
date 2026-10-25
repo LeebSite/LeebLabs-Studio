@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leeblabs.ai.id/sitemap.xml

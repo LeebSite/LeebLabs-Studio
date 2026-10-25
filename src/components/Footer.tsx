@@ -35,7 +35,10 @@ export function Footer() {
           </div>
           <div className="footer__base">
             <span>&copy; 2026 LeebLabs Studio — Pekanbaru, Indonesia.</span>
-            <span>AI yang kerja di workflow lokal, bukan sekadar bisa ngobrol.</span>
+            <span>
+              AI yang kerja di workflow lokal, bukan sekadar bisa ngobrol. LeebLabs Studio
+              adalah produk independen dan tidak berafiliasi dengan Kemendikdasmen.
+            </span>
           </div>
         </div>
       </footer>
