@@ -391,4 +391,5 @@ footer { padding: 2.6rem 0 2.2rem; }
 
 .section--final-cta { padding-top: 0; }
 
-.faq__item.open .faq__a { max-height: 500px; }
+.faq__item.open .faq__a { max-height: 500px; }:root[data-theme="dark"] .cta { background: var(--brand-tint); color: var(--ink); }
+:root[data-theme="dark"] .cta p { color: var(--ink-soft); }
