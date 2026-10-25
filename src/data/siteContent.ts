@@ -1,9 +1,8 @@
 export const audiences = [
-  "Guru & sekolah",
+  "Guru SD–SMK",
   "MGMP & komunitas guru",
-  "Seller Shopee",
-  "Seller TikTok Shop",
-  "UMKM jasa lokal",
+  "Sekolah & yayasan",
+  "Guru mapel umum & produktif",
 ];
 
 export const services = [
@@ -14,36 +13,36 @@ export const services = [
     name: "Guru AI",
     theme: "guru",
     description:
-      "Asisten penyusun perangkat pembelajaran yang nyambung satu sama lain — bukan dokumen acak. Kamu cukup isi mata pelajaran, kelas, dan topik; AI menyusun paket lengkap mengikuti struktur Pembelajaran Mendalam dan kurikulum yang berlaku, lalu kamu review dan edit sebelum dipakai.",
-    audience: "guru SD–SMK, MGMP, sekolah & yayasan, bimbel",
+      "Asisten penyusun perangkat pembelajaran untuk semua mata pelajaran SD–SMK, bukan hanya Informatika. Kamu isi jenjang, fase/kelas, mata pelajaran, CP, topik, dan jumlah pertemuan; AI menyusun satu paket yang saling nyambung: TP diturunkan dari CP, ATP urut per pertemuan, KKTP dan asesmen mengukur tujuan yang sama. Kamu review dan edit sebelum dipakai.",
+    audience: "guru semua mata pelajaran SD–SMK, MGMP, sekolah & yayasan",
     action: "Minta Demo Guru AI",
     subject: "Minta%20Demo%20Guru%20AI",
     note: "Mulai dari paket gratis terbatas",
     features: [
       {
-        title: "Modul ajar otomatis",
+        title: "CP → TP → ATP yang nyambung",
         description:
-          "Tujuan, langkah pembelajaran, dan asesmen tersusun rapi per pertemuan.",
+          "TP diturunkan dari CP yang kamu pilih, ATP urut per pertemuan, tidak lompat-lompat.",
       },
       {
-        title: "ATP & KKTP yang konsisten",
+        title: "KKTP & asesmen berkunci",
         description:
-          "Alur tujuan pembelajaran selaras dengan capaian per fase, tidak lompat-lompat.",
+          "Rubrik, asesmen diagnostik, formatif, dan sumatif, beserta kunci jawaban.",
       },
       {
-        title: "LKPD & bahan ajar siap pakai",
+        title: "Semua mapel, SD–SMK",
         description:
-          "Lembar kerja dan materi ajar mengikuti konteks kelas yang kamu isi.",
+          "Template per jenjang dan fase, bukan materi hafalan satu mapel.",
       },
       {
-        title: "Asesmen lengkap dengan kunci",
+        title: "Format sekolah bisa disesuaikan",
         description:
-          "Soal pilihan ganda dan uraian beserta kunci jawaban yang terverifikasi.",
+          "Struktur, kop, dan jumlah pertemuan mengikuti format sekolahmu.",
       },
       {
         title: "Export Word, PPT & Excel",
         description:
-          "Format rapi dan siap edit — langsung bisa dikumpulkan ke sekolah.",
+          "Format rapi dan siap edit, langsung bisa dikumpulkan ke sekolah.",
       },
     ],
   },
@@ -51,14 +50,14 @@ export const services = [
     id: "seller-ai",
     number: "02",
     category: "E-Commerce",
-    name: "Seller AI",
+    name: "Seller AI (Segera Hadir)",
     theme: "seller",
     description:
-      "Asisten jualan untuk Shopee & TikTok Shop yang bekerja dari data tokomu sendiri. Dari riset produk yang sedang naik, optimasi listing, sampai balasan chat — semua usulan lewat persetujuanmu dulu. Tanpa trik abu-abu, tanpa risiko akun.",
+      "Fase berikutnya setelah Guru AI. Saat ini belum dibuka untuk pilot. Gabung waitlist untuk diberi kabar saat dibuka.",
     audience: "seller UMKM yang sudah berjualan dan mulai kewalahan",
-    action: "Minta Audit Toko Gratis",
-    subject: "Minta%20Audit%20Toko%20Seller%20AI",
-    note: "Audit awal 7–14 hari data toko",
+    action: "Gabung Waitlist Seller AI",
+    subject: "Gabung%20Waitlist%20Seller%20AI",
+    note: "Dikembangkan setelah Guru AI",
     features: [
       {
         title: "Riset produk & kata kunci trending",
@@ -91,24 +90,24 @@ export const services = [
 
 export const workflowSteps = [
   {
-    title: "Ceritakan kebutuhanmu",
+    title: "Pilih jenjang, mapel & CP",
     description:
-      "Konsultasi singkat lewat email: mata pelajaran dan kelasmu, atau kondisi tokomu saat ini.",
+      "Isi kelas/fase, mata pelajaran, CP, topik, jumlah pertemuan, dan kurikulum yang dipakai sekolahmu.",
   },
   {
-    title: "Kami siapkan & susun",
+    title: "AI susun paket lengkap",
     description:
-      "AI menyusun draf pertama — perangkat ajar atau audit toko — berdasarkan konteks yang kamu berikan.",
+      "Modul ajar, ATP, KKTP, LKPD, dan asesmen berkunci disusun dalam satu paket yang saling nyambung.",
   },
   {
-    title: "Kamu review & approve",
+    title: "Kamu review & edit",
     description:
-      "Tidak ada yang terbit atau terpakai sebelum kamu periksa. Kamu tetap pemegang keputusan terakhir.",
+      "Periksa CP, level, dan kesesuaian kelas. Ubah dulu sebelum dipakai. Tidak ada yang terbit otomatis.",
   },
   {
-    title: "Pakai, ukur, ulangi",
+    title: "Export & pakai di kelas",
     description:
-      "Hasil dipakai langsung, dampaknya dilaporkan berkala, dan sistem makin akurat mengikuti gayamu.",
+      "Export Word, PPT, dan Excel yang rapi, dan simpan sebagai template untuk pertemuan berikutnya.",
   },
 ] as const;
 
@@ -120,21 +119,21 @@ export const principles = [
     icon: "people",
   },
   {
-    title: "Ikut aturan main yang berlaku",
+    title: "Mengikuti kurikulum resmi",
     description:
-      "Perangkat ajar mengikuti struktur kurikulum resmi; strategi seller mengikuti kebijakan platform. Aman untuk jangka panjang.",
+      "Perangkat mengikuti struktur CP, TP, ATP, dan KKTP. Kalau CP tidak ditemukan, tool bilang terus terang, tidak mengarang.",
     icon: "book",
   },
   {
     title: "Data kamu, milik kamu",
     description:
-      "Data kelas dan data toko tidak dipakai melatih model untuk pihak lain tanpa izin. Privasi dijaga sejak hari pertama.",
+      "Data kelas tidak dipakai melatih model untuk pihak lain tanpa izin. Privasi dijaga sejak hari pertama.",
     icon: "lock",
   },
   {
-    title: "Harga yang masuk akal",
+    title: "Harga yang masuk akal untuk guru",
     description:
-      "Dibangun untuk guru dan UMKM Indonesia: mulai gratis, naik kelas hanya saat manfaatnya sudah terasa.",
+      "Dibangun untuk guru Indonesia: mulai gratis, naik kelas hanya saat manfaatnya sudah terasa.",
     icon: "price",
   },
 ] as const;
@@ -180,52 +179,6 @@ export const pricingPlans = {
       subject: "Tanya%20Paket%20Sekolah%20Guru%20AI",
     },
   ],
-  seller: [
-    {
-      name: "Starter",
-      audience: "Untuk 1 toko yang baru naik kelas",
-      price: "Rp99rb",
-      period: " / bulan",
-      features: [
-        "1 toko (Shopee atau TikTok Shop)",
-        "Riset tren mingguan",
-        "Optimasi 10 listing per bulan",
-        "Laporan bulanan",
-      ],
-      action: "Pilih Starter",
-      subject: "Daftar%20Seller%20AI%20Starter",
-    },
-    {
-      name: "Pro",
-      audience: "Untuk seller aktif multi-platform",
-      price: "Rp249rb",
-      period: " / bulan",
-      features: [
-        "2 toko (Shopee + TikTok Shop)",
-        "Optimasi listing tanpa batas wajar",
-        "Balasan chat otomatis",
-        "Draf konten & skrip live mingguan",
-        "Laporan mingguan",
-      ],
-      action: "Pilih Pro",
-      subject: "Daftar%20Seller%20AI%20Pro",
-      featured: true,
-    },
-    {
-      name: "Business",
-      audience: "Untuk brand dengan banyak SKU",
-      price: "Custom",
-      period: " / hubungi kami",
-      features: [
-        "Multi-toko & multi-akun",
-        "Audit katalog menyeluruh",
-        "Prioritas dukungan",
-        "Laporan & review berkala bersama tim",
-      ],
-      action: "Hubungi Kami",
-      subject: "Tanya%20Seller%20AI%20Business",
-    },
-  ],
 } as const;
 
 export const faqs = [
@@ -235,9 +188,14 @@ export const faqs = [
       "Bisa, setelah kamu review. AI menyusun draf lengkap mengikuti struktur kurikulum dan Pembelajaran Mendalam, tapi guru tetap wajib memeriksa kesesuaian dengan karakter siswa dan kondisi kelasnya. Anggap AI sebagai asisten penyusun draf tercepatmu, bukan pengganti penilaian profesional.",
   },
   {
-    question: "Apakah Seller AI aman untuk akun toko saya?",
+    question: "Apakah Guru AI hanya untuk Informatika dan TKJ?",
     answer:
-      "Aman, karena kami bekerja dari data yang kamu berikan atau jalur resmi yang tersedia, dan semua perubahan listing harus lewat persetujuanmu. Kami tidak memakai otomasi yang melanggar kebijakan Shopee atau TikTok Shop — akunmu terlalu berharga untuk dipertaruhkan demi jalan pintas.",
+      "Tidak. Informatika dan TKJ hanya contoh awal yang sudah jadi. Mesinnya memakai CP dan template per jenjang dan fase, sehingga bisa dipakai untuk semua mata pelajaran SD–SMK. Pilot berikutnya justru menguji guru mapel lain untuk memastikan formatnya pas.",
+  },
+  {
+    question: "Bagaimana kalau CP saya tidak ada atau kurikulum sekolah saya berbeda?",
+    answer:
+      "Pilih atau tempel CP resmi yang dipakai sekolahmu, dan pilih kurikulumnya, misalnya Kurikulum Merdeka atau Pembelajaran Mendalam. Kalau CP tidak ditemukan, tool akan bilang terus terang dan memintamu mengisi CP-nya, bukan mengarang CP baru. Format sekolah juga bisa disesuaikan.",
   },
   {
     question: "Saya tidak paham teknologi. Apakah tetap bisa pakai?",
@@ -252,7 +210,7 @@ export const faqs = [
   {
     question: "LeebLabs Studio itu apa, dan siapa di baliknya?",
     answer:
-      "LeebLabs adalah studio aplikasi AI independen yang berbasis di Pekanbaru, Riau. Kami fokus pada masalah lokal yang spesifik — administrasi guru dan operasional seller online Indonesia — alih-alih membuat chatbot generik untuk semua orang.",
+      "LeebLabs adalah studio aplikasi AI independen yang berbasis di Pekanbaru, Riau. Fokus utama kami saat ini adalah Guru AI: membantu guru menyiapkan perangkat pembelajaran sesuai kurikulum. Seller AI direncanakan sebagai fase berikutnya.",
   },
 ] as const;
 

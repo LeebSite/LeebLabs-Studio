@@ -6,19 +6,19 @@ export function Hero() {
       <section className="hero">
         <div className="wrap hero__grid">
           <div>
-            <span className="tag">Studio Aplikasi AI</span>
+            <span className="tag">Fokus: Guru AI</span>
             <h1>
-              AI yang benar-benar <em>kerja</em> di workflow kamu.
+              Perangkat ajar lengkap, sesuai kurikulum, tanpa lembur administrasi.
             </h1>
             <p className="hero__sub">
-              LeebLabs Studio membangun alat AI yang menyelesaikan pekerjaan nyata — bukan
-              sekadar chatbot. Dua fokus kami saat ini: membantu <strong>guru</strong>{" "}
-              menyiapkan perangkat pembelajaran dalam menit, dan membantu{" "}
-              <strong>seller online</strong> menaikkan penjualan di Shopee &amp; TikTok Shop.
+              LeebLabs Studio membantu guru SD–SMK menyiapkan perangkat pembelajaran sesuai
+              Kurikulum Merdeka dan Pembelajaran Mendalam: dari CP ke TP, ATP, KKTP, modul
+              ajar, LKPD, asesmen berkunci, sampai export Word, PPT, dan Excel. Kamu yang
+              review dan approve sebelum dipakai.
             </p>
             <div className="hero__cta">
               <a className="btn btn--primary" href="#layanan">
-                Lihat Layanan
+                Lihat Guru AI
                 <svg
                   width="16"
                   height="16"
@@ -39,12 +39,12 @@ export function Hero() {
             </div>
             <div className="hero__stats">
               <div>
-                <strong>2</strong>
-                <span>Layanan fokus: Guru AI &amp; Seller AI</span>
+                <strong>Semua mapel</strong>
+                <span>Guru SD–SMK, semua mata pelajaran</span>
               </div>
               <div>
-                <strong>1 hari</strong>
-                <span>Target setup awal untuk UMKM</span>
+                <strong>1 paket</strong>
+                <span>Modul + ATP + KKTP + LKPD + asesmen</span>
               </div>
               <div>
                 <strong>100%</strong>
@@ -68,43 +68,13 @@ export function Hero() {
 
 function ProductPreview() {
   return (
-    <div className="hero__visual">
-      <article className="hero__product hero__product--seller">
-        <div className="hero__portrait hero__portrait--seller">
-          <span className="hero__portrait-shadow" aria-hidden="true" />
-          <img
-            src={new URL("../public/hero-akuntan-sama-ukuran.webp", import.meta.url).href}
-            alt="Akuntan pria bekerja menggunakan laptop"
-            width="1024"
-            height="1024"
-          />
-        </div>
-        <div className="mock mock--seller">
-          <div className="mock__head">
-            <span className="mock__dot mock__dot--amber" />
-            <span>SELLER AI — TREN MINGGU INI</span>
-          </div>
-          <div className="mock__row">
-            <b>Kunjungan toko</b>
-            <span className="pill pill--amber">Naik</span>
-          </div>
-          <div className="mock__row">
-            <b>Chat terbalas &lt; 1 menit</b>
-            <span className="pill pill--amber">Otomatis</span>
-          </div>
-          <div className="bars">
-            {Array.from({ length: 7 }, (_, index) => (
-              <i key={index} className={index === 6 ? "hot" : undefined} />
-            ))}
-          </div>
-        </div>
-      </article>
+    <div className="hero__visual" style={{ gridTemplateColumns: "1fr" }}>
       <article className="hero__product hero__product--guru">
         <div className="hero__portrait hero__portrait--guru">
           <span className="hero__portrait-shadow" aria-hidden="true" />
           <img
             src={new URL("../public/hero-guru-sama-ukuran.webp", import.meta.url).href}
-            alt="Guru perempuan mengenakan seragam cokelat"
+            alt="Ilustrasi guru perempuan menyiapkan perangkat ajar menggunakan tablet"
             width="1024"
             height="1024"
           />
