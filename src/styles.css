@@ -377,8 +377,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: var(--brand-deep); color: #eaf5ee; border-radius: var(--radius-l);
   padding: clamp(2.2rem, 5vw, 3.5rem); text-align: center;
 }
+:root[data-theme="dark"] .cta { background: var(--brand-tint); color: var(--ink); }
 .cta h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 800; margin-bottom: .8rem; }
 .cta p { color: #bcd8c6; max-width: 34rem; margin: 0 auto 1.8rem; }
+:root[data-theme="dark"] .cta p { color: var(--ink-soft); }
 .cta .btn--primary { background: var(--accent); color: #241a00; }
 .cta .btn--primary:hover { background: #ffc94d; }
 
@@ -391,5 +393,14 @@ footer { padding: 2.6rem 0 2.2rem; }
 
 .section--final-cta { padding-top: 0; }
 
-.faq__item.open .faq__a { max-height: 500px; }:root[data-theme="dark"] .cta { background: var(--brand-tint); color: var(--ink); }
-:root[data-theme="dark"] .cta p { color: var(--ink-soft); }
+.faq__item.open .faq__a { max-height: 500px; }
+
+.waitlist__form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; max-width: 760px; }
+.waitlist__field { display: grid; min-width: 0; gap: .4rem; color: var(--ink-soft); font-weight: 600; }
+.waitlist__field input, .waitlist__field select, .waitlist__field textarea {
+  width: 100%; min-width: 0; padding: .7rem .85rem; border: 1px solid var(--line);
+  border-radius: var(--radius-s); background: var(--surface); color: var(--ink); font: inherit;
+}
+.waitlist__field--full, .waitlist__note { grid-column: 1 / -1; }
+.waitlist__form > p { color: var(--ink-soft); }
+@media (max-width: 600px) { .waitlist__form { grid-template-columns: minmax(0, 1fr); } }

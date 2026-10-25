@@ -1,4 +1,4 @@
-import { audiences, emailLink } from "../data/siteContent";
+import { audiences } from "../data/siteContent";
 
 export function Hero() {
   return (
@@ -33,10 +33,7 @@ export function Hero() {
                   <path d="M12 5v14M5 12l7 7 7-7" />
                 </svg>
               </a>
-              <a
-                className="btn btn--ghost"
-                href={emailLink("Gabung%20Waitlist%20LeebLabs")}
-              >
+              <a className="btn btn--ghost" href="#waitlist">
                 Gabung Waitlist
               </a>
             </div>

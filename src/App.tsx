@@ -5,6 +5,7 @@ import { Hero } from "./components/Hero";
 import { Principles } from "./components/Principles";
 import { Pricing } from "./components/Pricing";
 import { Services } from "./components/Services";
+import { WaitlistForm } from "./components/WaitlistForm";
 import { Workflow } from "./components/Workflow";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <main id="atas">
         <Hero />
         <Services />
+        <WaitlistForm />
         <Workflow />
         <Principles />
         <Pricing />
