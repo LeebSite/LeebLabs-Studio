@@ -5,7 +5,7 @@ export function Hero() {
     <>
       <section className="hero">
         <div className="wrap hero__grid">
-          <div>
+          <div className="hero__copy">
             <span className="tag">Fokus: Guru AI</span>
             <h1>
               Perangkat ajar lengkap, sesuai kurikulum, tanpa lembur administrasi.

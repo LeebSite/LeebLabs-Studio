@@ -195,8 +195,10 @@ ul { margin: 0; padding: 0; list-style: none; }
    6. HERO
    ============================================================ */
 .hero { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 7vw, 5rem); overflow: hidden; }
-.hero__grid { display: grid; grid-template-columns: minmax(0, .45fr) minmax(0, .55fr); gap: clamp(1.5rem, 3vw, 2.5rem); align-items: center; }
+.hero__grid { display: grid; grid-template-columns: minmax(0, .45fr) minmax(0, .55fr); gap: clamp(1.5rem, 3vw, 2.5rem); align-items: start; }
 
+.hero__copy { position: relative; }
+.hero__copy > .tag { position: absolute; bottom: calc(100% + 1rem); margin-bottom: 0; }
 .hero h1 { font-size: clamp(2.15rem, 4.6vw, 3.35rem); font-weight: 800; margin-bottom: 1.15rem; }
 .hero h1 em { font-style: normal; color: var(--brand); position: relative; white-space: nowrap; }
 .hero h1 em::after {
@@ -220,8 +222,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero__portrait::after { content: ""; position: absolute; z-index: 1; inset: 75% 0 0; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none; }
 .hero__portrait-shadow { position: absolute; z-index: -1; left: 20%; right: 20%; bottom: 3%; height: 12px; border-radius: 50%; box-shadow: 0 0 30px 12px color-mix(in srgb, var(--ink) 14%, transparent); }
 .hero__portrait img { position: relative; z-index: 0; display: block; width: 100%; height: 300px; object-fit: contain; object-position: center bottom; }
-.hero__portrait--guru { height: 420px; }
-.hero__portrait--guru img { width: auto; max-width: 100%; height: 420px; }
+.hero__portrait--guru { height: 393px; }
+.hero__portrait--guru img {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  max-width: none;
+  height: 420px;
+  object-fit: contain;
+  object-position: center bottom;
+}
 .mock {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-l);
   box-shadow: var(--shadow); padding: .85rem;
@@ -250,7 +260,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__visual { grid-template-columns: 1fr; }
   .hero__portrait, .hero__portrait img { height: 240px; }
-  .hero__portrait--guru { height: 336px; }
+  .hero__portrait--guru { height: 318px; }
   .hero__portrait--guru img { height: 336px; }
 }
 
