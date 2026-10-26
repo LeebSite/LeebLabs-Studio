@@ -1,5 +1,5 @@
 import { emailLink } from "../data/siteContent";
-import { Brand } from "./Brand";
+import { Brand, HomeAnchor } from "./Brand";
 
 export function Footer() {
   return (
@@ -26,10 +26,10 @@ export function Footer() {
           <div className="footer__inner">
             <Brand />
             <nav className="footer__links" aria-label="Tautan footer">
-              <a href="#guru-ai">Guru AI</a>
-              <a href="#seller-ai">Seller AI</a>
-              <a href="#cara-kerja">Cara Kerja</a>
-              <a href="#paket">Paket</a>
+              <HomeAnchor href="#guru-ai">Guru AI</HomeAnchor>
+              <HomeAnchor href="#seller-ai">Seller AI</HomeAnchor>
+              <HomeAnchor href="#cara-kerja">Cara Kerja</HomeAnchor>
+              <HomeAnchor href="#paket">Paket</HomeAnchor>
               <a href={emailLink()}>halo@leeblabs.ai.id</a>
             </nav>
           </div>

@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 export function Brand() {
   return (
-    <a className="logo" href="#atas" aria-label="LeebLabs Studio">
+    <Link className="logo" to="/#atas" aria-label="LeebLabs Studio">
       <span className="logo__mark" aria-hidden="true">
         <svg
           width="19"
@@ -23,7 +24,25 @@ export function Brand() {
         LeebLabs
         <small>Studio</small>
       </span>
-    </a>
+    </Link>
+  );
+}
+
+export function HomeAnchor({
+  href,
+  children,
+  className,
+  onClick,
+}: {
+  href: string;
+  children: ReactNode;
+  className?: string;
+  onClick?: () => void;
+}) {
+  return (
+    <Link className={className} to={{ pathname: "/", hash: href }} onClick={onClick}>
+      {children}
+    </Link>
   );
 }
 

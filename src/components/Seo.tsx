@@ -12,6 +12,7 @@ type SeoProps = {
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
+  article?: boolean;
 };
 
 type HeadAttribute = "content" | "href";
@@ -70,6 +71,7 @@ export function Seo({
   canonical,
   ogTitle = title,
   ogDescription = description,
+  article = false,
 }: SeoProps) {
   useEffect(() => {
     const previousTitle = document.title;
@@ -92,12 +94,27 @@ export function Seo({
     }
 
     document.title = title;
+    const articleScript = article ? document.createElement("script") : null;
+
+    if (articleScript) {
+      articleScript.type = "application/ld+json";
+      articleScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: canonical,
+        inLanguage: "id",
+      }).replace(/</g, "\\u003c");
+      document.head.append(articleScript);
+    }
 
     return () => {
       document.title = previousTitle;
       previousAttributes.reverse().forEach(restoreHeadAttribute);
+      articleScript?.remove();
     };
-  }, [canonical, description, ogDescription, ogTitle, title]);
+  }, [article, canonical, description, ogDescription, ogTitle, title]);
 
   return null;
 }

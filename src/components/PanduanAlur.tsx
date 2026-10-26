@@ -1,33 +1,49 @@
-import { CheckIcon, SectionHeading } from "./Brand";
+import { CheckIcon, HomeAnchor } from "./Brand";
 
 const terms = [
   {
     title: "Capaian Pembelajaran (CP)",
     description:
-      "Kompetensi pembelajaran yang menjadi acuan. Gunakan atau tempel CP resmi yang berlaku di sekolah.",
+      "Acuan kompetensi dan lingkup materi yang perlu dicapai murid. Gunakan CP resmi yang berlaku untuk kurikulum dan fase di sekolahmu.",
   },
   {
     title: "Tujuan Pembelajaran (TP)",
     description:
-      "Tujuan belajar yang disusun dengan mengacu pada CP pilihan guru dan konteks kelas.",
+      "Tujuan belajar yang lebih terarah, diturunkan dari CP, dan disesuaikan dengan konteks kelas.",
   },
   {
     title: "Alur Tujuan Pembelajaran (ATP)",
     description:
-      "Urutan TP yang direncanakan untuk membantu pembelajaran berjalan bertahap.",
+      "Susunan TP secara bertahap agar urutan belajar sepanjang fase jelas dan dapat direncanakan per pertemuan.",
   },
   {
     title: "Kriteria Ketercapaian Tujuan Pembelajaran (KKTP)",
     description:
-      "Kriteria yang membantu guru menilai apakah tujuan pembelajaran telah tercapai.",
+      "Kriteria untuk membantu guru menilai ketercapaian TP dengan bukti belajar dan asesmen yang sesuai.",
   },
 ];
 
 const steps = [
-  "Pilih CP resmi sesuai jenjang, fase, mata pelajaran, dan kurikulum sekolah.",
-  "Susun TP berdasarkan CP dan konteks murid tanpa mengubah makna capaian.",
-  "Urutkan TP menjadi ATP yang realistis untuk waktu dan jumlah pertemuan.",
-  "Turunkan kriteria KKTP dan asesmen yang mengukur tujuan yang sama.",
+  {
+    title: "Pilih atau tempel CP resmi",
+    description:
+      "Pastikan CP berasal dari sumber resmi dan sesuai dengan kurikulum, mata pelajaran, jenjang, serta fase yang digunakan sekolah.",
+  },
+  {
+    title: "Turunkan TP dari CP itu",
+    description:
+      "Gunakan CP pilihan sebagai acuan untuk merumuskan tujuan yang jelas, relevan, dan sesuai dengan kondisi kelas.",
+  },
+  {
+    title: "Urutkan ATP per pertemuan",
+    description:
+      "Susun TP menjadi urutan belajar yang bertahap. Periksa keterkaitannya dan sesuaikan dengan jumlah serta durasi pertemuan.",
+  },
+  {
+    title: "Susun KKTP dan asesmen",
+    description:
+      "Tentukan kriteria ketercapaian dan asesmen yang mengukur tujuan pembelajaran yang sama.",
+  },
 ];
 
 const reviewChecklist = [
@@ -39,75 +55,111 @@ const reviewChecklist = [
 
 const commonMistakes = [
   "TP terlalu tinggi atau tidak sesuai dengan CP yang dipilih.",
-  "ATP tidak urut sehingga alur belajar sulit diikuti.",
+  "ATP lompat-lompat sehingga alur belajar sulit diikuti.",
   "Asesmen tidak mengukur tujuan pembelajaran yang ditulis.",
 ];
 
 export function PanduanAlur() {
   return (
-    <section className="section">
-      <div className="wrap">
-        <SectionHeading tag="Panduan Guru" title="Alur CP ke TP ke ATP ke KKTP">
-          Kenali hubungan antarbagian perangkat ajar dan tinjau kembali setiap dokumen
-          menggunakan CP resmi dari sekolah.
-        </SectionHeading>
-        <div className="principles">
-          {terms.map((term) => (
-            <article className="principle" key={term.title}>
-              <div>
-                <h3>{term.title}</h3>
-                <p>{term.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="section-head">
-          <h3>Empat langkah menyusun perangkat yang selaras</h3>
-        </div>
-        <div className="steps">
-          {steps.map((step, index) => (
-            <article className="step" key={step}>
-              <span className="step__num">{String(index + 1).padStart(2, "0")}</span>
-              <p>{step}</p>
-            </article>
-          ))}
-        </div>
-        <div className="principles">
-          <article className="principle">
-            <div>
-              <h3>Checklist review guru</h3>
-              <ul className="feature-list">
-                {reviewChecklist.map((item) => (
-                  <li key={item}>
-                    <span className="check">
-                      <CheckIcon />
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+    <>
+      <section className="section">
+        <div className="wrap">
+          <div className="section-head">
+            <span className="tag">Panduan Guru</span>
+            <h1>Dari CP ke TP, ATP, sampai KKTP: Satu Alur yang Nyambung</h1>
+            <p>
+              Panduan ini ditujukan untuk guru SD–SMK yang ingin menyusun perangkat
+              pembelajaran dengan tujuan, urutan, dan asesmen yang konsisten. Mulailah dari CP
+              resmi yang digunakan sekolah, lalu tinjau setiap bagian sebelum dipakai di kelas.
+            </p>
+          </div>
+
+          <section aria-labelledby="istilah-panduan">
+            <div className="section-head">
+              <h2 id="istilah-panduan">Memahami istilah dalam alur</h2>
             </div>
-          </article>
-          <article className="principle">
-            <div>
-              <h3>Kesalahan umum yang perlu dihindari</h3>
-              <ul className="feature-list">
-                {commonMistakes.map((item) => (
-                  <li key={item}>
-                    <span className="check">
-                      <CheckIcon />
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="principles">
+              {terms.map((term) => (
+                <article className="principle" key={term.title}>
+                  <div>
+                    <h3>{term.title}</h3>
+                    <p>{term.description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
-          </article>
+          </section>
+
+          <section aria-labelledby="langkah-panduan">
+            <div className="section-head">
+              <h2 id="langkah-panduan">Empat langkah menyusun alur yang selaras</h2>
+            </div>
+            <div className="steps">
+              {steps.map((step, index) => (
+                <article className="step" key={step.title}>
+                  <span className="step__num">{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section aria-labelledby="review-panduan">
+            <div className="section-head">
+              <h2 id="review-panduan">Review sebelum perangkat dipakai</h2>
+            </div>
+            <div className="principles">
+              <article className="principle">
+                <div>
+                  <h3>Checklist review guru</h3>
+                  <ul className="feature-list">
+                    {reviewChecklist.map((item) => (
+                      <li key={item}>
+                        <span className="check">
+                          <CheckIcon />
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+              <article className="principle">
+                <div>
+                  <h3>Kesalahan umum yang perlu dihindari</h3>
+                  <ul className="feature-list">
+                    {commonMistakes.map((item) => (
+                      <li key={item}>
+                        <span className="check">
+                          <CheckIcon />
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
-        <a className="btn btn--primary" href="#waitlist">
-          Gabung Waitlist Guru AI
-        </a>
-      </div>
-    </section>
+      </section>
+      <section className="section section--final-cta">
+        <div className="wrap">
+          <div className="cta">
+            <h2>Ingin menyusun perangkat ajar dengan alur yang selaras?</h2>
+            <p>
+              Kenali Guru AI dan bergabung ke waitlist untuk mendapat kabar saat pilot dibuka.
+            </p>
+            <HomeAnchor className="btn btn--primary" href="#waitlist">
+              Gabung Waitlist Guru AI
+            </HomeAnchor>
+            <HomeAnchor className="btn btn--ghost" href="#guru-ai">
+              Lihat layanan Guru AI
+            </HomeAnchor>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

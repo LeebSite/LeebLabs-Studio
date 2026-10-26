@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { navigationLinks, emailLink } from "../data/siteContent";
 import { useTheme } from "../hooks/useTheme";
-import { Brand } from "./Brand";
+import { Brand, HomeAnchor } from "./Brand";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,10 +18,17 @@ export function Header() {
           aria-label="Navigasi utama"
         >
           {navigationLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+            <HomeAnchor
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
-            </a>
+            </HomeAnchor>
           ))}
+          <Link to="/panduan/cp-tp-atp-kktp" onClick={() => setMenuOpen(false)}>
+            Panduan
+          </Link>
           <a
             className="btn btn--primary btn--sm"
             href={emailLink("Konsultasi%20LeebLabs%20Studio")}
