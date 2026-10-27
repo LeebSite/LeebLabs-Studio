@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
+import { ContohInformatikaKelas10 } from "./pages/ContohInformatikaKelas10";
 import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -100,6 +101,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/panduan/cp-tp-atp-kktp" element={<GuidePage />} />
+        <Route
+          path="/contoh/informatika-kelas-10"
+          element={<ContohInformatikaKelas10 />}
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

@@ -1,26 +1,28 @@
 import { emailLink } from "../data/siteContent";
 import { Brand, HomeAnchor } from "./Brand";
 
-export function Footer() {
+export function Footer({ showCta = true }: { showCta?: boolean }) {
   return (
     <>
-      <section className="section section--final-cta">
-        <div className="wrap">
-          <div className="cta">
-            <h2>Siap menghemat waktu minggu ini?</h2>
-            <p>
-              Ceritakan kebutuhanmu lewat email — kami balas dengan rekomendasi layanan dan
-              langkah pertama yang konkret, tanpa kewajiban apa pun.
-            </p>
-            <a
-              className="btn btn--primary"
-              href={emailLink("Konsultasi%20Gratis%20LeebLabs%20Studio")}
-            >
-              Konsultasi Gratis via Email
-            </a>
+      {showCta && (
+        <section className="section section--final-cta">
+          <div className="wrap">
+            <div className="cta">
+              <h2>Siap menghemat waktu minggu ini?</h2>
+              <p>
+                Ceritakan kebutuhanmu lewat email — kami balas dengan rekomendasi layanan dan
+                langkah pertama yang konkret, tanpa kewajiban apa pun.
+              </p>
+              <a
+                className="btn btn--primary"
+                href={emailLink("Konsultasi%20Gratis%20LeebLabs%20Studio")}
+              >
+                Konsultasi Gratis via Email
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       <footer>
         <div className="wrap">
           <div className="footer__inner">

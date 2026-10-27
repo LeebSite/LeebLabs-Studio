@@ -29,6 +29,9 @@ export function Header() {
           <Link to="/panduan/cp-tp-atp-kktp" onClick={() => setMenuOpen(false)}>
             Panduan
           </Link>
+          <Link to="/contoh/informatika-kelas-10" onClick={() => setMenuOpen(false)}>
+            Contoh
+          </Link>
           <a
             className="btn btn--primary btn--sm"
             href={emailLink("Konsultasi%20LeebLabs%20Studio")}
